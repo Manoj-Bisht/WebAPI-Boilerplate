@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{90A3B76E-0B39-4F21-B039-8EBD2D6A62D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebAPI.Boilerplate.BusinessService.Service</RootNamespace>
+    <AssemblyName>WebAPI.Boilerplate.BusinessService.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EmployeeService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebAPI.Boilerplate.BusinessService.Interface\WebAPI.Boilerplate.BusinessService.Interface.csproj">
+      <Project>{69cb4335-809c-46ae-aea9-e7fa4bc0cb50}</Project>
+      <Name>WebAPI.Boilerplate.BusinessService.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebAPI.Boilerplate.DataService.Interface\WebAPI.Boilerplate.DataService.Interface.csproj">
+      <Project>{38543d92-f107-4992-ac59-614c0e31dc7b}</Project>
+      <Name>WebAPI.Boilerplate.DataService.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebAPI.Boilerplate.DataService\WebAPI.Boilerplate.DataService.csproj">
+      <Project>{4dd7bec0-ef70-4432-9d08-a7a4706d0f8c}</Project>
+      <Name>WebAPI.Boilerplate.DataService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebAPI.Boilerplate.Logger\WebAPI.Boilerplate.Logger.csproj">
+      <Project>{0b0f0d5a-97ce-4aba-9c34-fdada2be8bc4}</Project>
+      <Name>WebAPI.Boilerplate.Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebAPI.Boilerplate.Model\WebAPI.Boilerplate.Model.csproj">
+      <Project>{6c37d327-f285-454e-999b-0cbfc88ddc19}</Project>
+      <Name>WebAPI.Boilerplate.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
